@@ -1,0 +1,36 @@
+{
+  "settings": {
+    "title": "Birthday Settings",
+    "description": "Set up the birthday notifications you want to receive here.",
+    "person": {
+      "title": "Person",
+      "name": "Name",
+      "mobile": "Mobile Number",
+      "mobile2": "2nd Mobile number",
+      "message": "Birthday Message",
+      "dateOfBirth": "Date of Birth",
+      "babyCheckbox": "Ignore Birthday year",
+      "imageUrl": "Birthday card image URL",
+      "category": "Category",
+      "add": "Add Person",
+      "save": "Save",
+      "cancel": "Cancel"
+    },
+    "personList": {
+      "title": "Persons",
+      "name": "Name",
+      "dateOfBirth": "Birthday",
+      "age": "age",
+      "category": "Category",
+      "message": "Message",
+      "actions": "Actions",
+      "edit": "Edit",
+      "delete": "Delete"
+    }
+  },
+  "messages": {
+    "validation_error": "Please check the input data",
+    "person_added": "Birthday of __name__ has been added",
+    "birthday_notification": "Today is __name__'s birthday 🎉. He/She is __age__ years old."
+  }
+}

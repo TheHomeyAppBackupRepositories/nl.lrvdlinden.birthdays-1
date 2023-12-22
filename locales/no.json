@@ -1,0 +1,35 @@
+{
+  "settings": {
+    "title": "Bursdagsinnstillinger",
+    "description": "Sett opp bursdagsvarslingene du vil motta her.",
+    "person": {
+      "title": "Person",
+      "name": "Navn",
+      "mobile": "Mobilnummer",
+      "mobile2": "Mobilnummer 2",
+      "message": "Bursdagsmelding",
+      "dateOfBirth": "Fødselsdato",
+      "category": "Kategori",
+      "babyCheckbox": "Ignorer fødselsår",
+      "imageUrl": "Birthday card image URL",
+      "add": "Legg til person",
+      "save": "Lagre",
+      "cancel": "Avbryt"
+    },
+    "personList": {
+      "title": "Personer",
+      "name": "Navn",
+      "dateOfBirth": "Fødselsdato",
+      "category": "Kategori",
+      "message": "Melding",
+      "actions": "Handlinger",
+      "edit": "Rediger",
+      "delete": "Slett"
+    }
+  },
+  "messages": {
+    "validation_error": "Vennligst sjekk de innskrevne data",
+    "person_added": "Bursdag for __name__ er lagt til",
+    "birthday_notification": "I dag er __name__'s bursdag 🎉. Han/Hun er __age__ år gammel."
+  }
+}

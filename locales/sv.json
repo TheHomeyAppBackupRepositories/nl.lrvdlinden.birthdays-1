@@ -1,0 +1,36 @@
+{
+  "settings": {
+    "title": "Födelsedagsinställningar",
+    "description": "Ställ in de födelsedagsaviseringar du vill ta emot här.",
+    "person": {
+      "title": "Person",
+      "name": "Namn",
+      "mobile": "Mobilnummer",
+      "mobile2": "Mobilnummer 2",
+      "message": "Födelsedagsmeddelande",
+      "dateOfBirth": "Födelsedatum",
+      "category": "Kategori",
+      "babyCheckbox": "Ignorera födelseår",
+      "imageUrl": "Birthday card image URL",
+      "imageUrl": "URL Image",
+      "add": "Lägg till person",
+      "save": "Spara",
+      "cancel": "Avbryt"
+    },
+    "personList": {
+      "title": "Personer",
+      "name": "Namn",
+      "dateOfBirth": "Födelsedatum",
+      "category": "Kategori",
+      "message": "Meddelande",
+      "actions": "Åtgärder",
+      "edit": "Redigera",
+      "delete": "Radera"
+    }
+  },
+  "messages": {
+    "validation_error": "Kontrollera de inmatade uppgifterna",
+    "person_added": "Födelsedag för __name__ har lagts till",
+    "birthday_notification": "Idag är det __name__'s födelsedag 🎉. Han/Hon är __age__ år gammal."
+  }
+}

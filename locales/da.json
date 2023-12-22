@@ -1,0 +1,38 @@
+{
+  "menu": {
+    "title": "Fødselsdag"
+    },
+  "settings": {
+    "title": "Fødselsdagsindstillinger",
+    "description": "Opsæt de fødselsdagsnotifikationer, du ønsker at modtage her.",
+    "person": {
+      "title": "Person",
+      "name": "Navn",
+      "mobile": "Mobilnummer",
+      "mobile2": "Mobilnummer 2",
+      "message": "Fødselsdagsbesked",
+      "dateOfBirth": "Fødselsdato",
+      "category": "Kategori",
+      "babyCheckbox": "Ignorer fødselsåret",
+      "imageUrl": "Birthday card image URL",
+      "add": "Tilføj person",
+      "save": "Gem",
+      "cancel": "Annuller"
+    },
+    "personList": {
+      "title": "Personer",
+      "name": "Navn",
+      "dateOfBirth": "Fødselsdato",
+      "category": "Kategori",
+      "message": "Besked",
+      "actions": "Handlinger",
+      "edit": "Rediger",
+      "delete": "Slet"
+    }
+  },
+  "messages": {
+    "validation_error": "Tjek venligst de indtastede data",
+    "person_added": "Fødselsdag for __name__ er blevet tilføjet",
+    "birthday_notification": "I dag er det __name__'s fødselsdag 🎉. Han/Hun er __age__ år gammel."
+  }
+}

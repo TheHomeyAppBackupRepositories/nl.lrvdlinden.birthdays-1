@@ -1,0 +1,35 @@
+{
+  "settings": {
+    "title": "Ustawienia urodzin",
+    "description": "Ustaw tutaj powiadomienia urodzinowe, które chcesz otrzymać.",
+    "person": {
+      "title": "Osoba",
+      "name": "Imię",
+      "mobile": "Numer komórki",
+      "mobile2": "Numer komórki 2",
+      "message": "Wiadomość urodzinowa",
+      "dateOfBirth": "Data urodzenia",
+      "category": "Kategoria",
+      "babyCheckbox": "Ignorer fødselsåret",
+      "imageUrl": "Birthday card image URL",
+      "add": "Dodaj osobę",
+      "save": "Zapisz",
+      "cancel": "Anuluj"
+    },
+    "personList": {
+      "title": "Osoby",
+      "name": "Imię",
+      "dateOfBirth": "Data urodzenia",
+      "category": "Kategoria",
+      "message": "Wiadomość",
+      "actions": "Akcje",
+      "edit": "Edytuj",
+      "delete": "Usuń"
+    }
+  },
+  "messages": {
+    "validation_error": "Sprawdź wprowadzone dane",
+    "person_added": "Urodziny __name__ zostały dodane",
+    "birthday_notification": "Dziś są urodziny __name__ 🎉. On/Ona ma __age__ lat."
+  }
+}

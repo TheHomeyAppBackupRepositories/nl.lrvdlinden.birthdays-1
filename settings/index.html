@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="/homey.js" data-origin="settings"></script>
+  <link rel="stylesheet" type="text/css" href="style/styles.css">
+</head>
+<body>
+
+  <div id="menu">
+    <header class="menu-header">
+      <div style="text-align:center;">
+        <img src="https://raw.githubusercontent.com/LRvdLinden/Homey_Brands/main/Birthdays/settings_banner.png" alt="Banner" style="max-width:100%;">
+      </div>
+      <h1 class="homey-title" data-i18n="menu.title">Birthdays</h1>
+    </header>
+    <ul>
+          <!-- Menu item Birthdays -->
+      <li id="menu-birthdays" style="display: flex; align-items: center; justify-content: space-between;">
+        <div style="display: flex; align-items: center;">
+            <div class="icon-container-birthdays">
+          <img src="svg/birthdays.svg" alt="Birthdays" />
+        </div>
+          <span style="margin-left: 10px; font-size: 16px;">Birthdays</span>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 24 24" style="fill:#c8c8cf;">
+          <g fill="#c8c8cf">
+            <path d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z"></path>
+          </g>
+        </svg>
+      </li>
+      
+    <!-- Menu item events -->
+    <li id="menu-soon" style="display: flex; align-items: center; justify-content: space-between;">
+      <div style="display: flex; align-items: center;">
+          <div class="icon-container-soon">
+        <img src="svg/plus-item.svg" alt="soon" />
+        </div>
+        <span style="margin-left: 10px; font-size: 16px;">COMING SOON</span>
+      </div>
+    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 24 24" style="fill:#c8c8cf;">
+      <g fill="#c8c8cf">
+        <path d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z"></path>
+      </g>
+    </svg>
+  </li>
+</ul><br><br><br><br><br><br><br><br><br><br><br>
+    <!-- Footer -->
+    <footer style="margin-top: 20px;">
+      Made with 
+      <svg viewBox="0 0 1792 1792" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" style="height: 0.8rem;">
+        <path d="M896 1664q-26 0-44-18l-624-602q-10-8-27.5-26T145 952.5 77 855 23.5 734 0 596q0-220 127-344t351-124q62 0 126.5 21.5t120 58T820 276t76 68q36-36 76-68t95.5-68.5 120-58T1314 128q224 0 351 124t127 344q0 221-229 450l-623 600q-18 18-44 18z" fill="#ef35aa"></path>
+    </svg> 
+    in <a href="https://www.google.com/maps/dir//Apeldoorn" target="_blank" class="custom-link">Apeldoorn</a><br>
+    See more <a href="https://community.homey.app/t/apps-made-by-lrvdlinden/85452" target="_blank" class="custom-link">apps</a> by <a href="https://community.homey.app/t/apps-made-by-lrvdlinden/85452" target="_blank" class="custom-link-reverse">@LRvdLinden</a>
+  </footer>
+  </div>
+  
+  <div id="content-area" class="hidden">
+    <!-- Blijft altijd zichtbaar en statisch bovenaan -->
+    <div class="buttons-container">
+      <!-- Knoppen: Terug en Toevoegen -->
+      <button id="back-to-menu" class="back-button">
+        <img src="svg/arrow-prev.svg" alt="Back" class="back-button-icon"/>
+        <span class="back-button-text">Back</span>
+      </button>
+      <button id="add-person-button" class="circle-button">
+        <img src="svg/plus-small.svg" alt="Add" class="add-person-button-icon"/>
+      </button>
+    </div>
+
+    <div class="scrollable-content">
+      <!-- Content Header met banner, titel, ondertitel -->
+      <div class="content-header">
+        <header class="homey-header">
+          <div style="width:100%; text-align:center;">
+            <img src="https://raw.githubusercontent.com/LRvdLinden/Homey_Brands/main/Birthdays/settings_banner.png"
+                 alt="Banner" style="max-width:100%;">
+          </div>
+          <h1 class="homey-title" data-i18n="settings.title">App Titel</h1>
+          <p class="homey-subtitle" data-i18n="settings.description">Beschrijving</p>
+        </header>
+      </div>
+
+      <div id="person-list">
+        <!-- Lijst met personen -->
+        <h2 class="homey-title" data-i18n="settings.personList.title"></h2>
+        <table class="homey-table" id="person-table">
+          <thead>
+            <tr>
+              <!-- Inhoud van de tabel -->
+              <th data-i18n="settings.personList.name">Name</th>
+              <th data-i18n="settings.personList.dateOfBirth">Date of birth</th>
+              <th data-i18n="settings.personList.age">Age</th>
+              <th data-i18n="settings.personList.message">Message</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        
+        <!-- Container voor de Back to Top knop -->
+        <div class="back-to-top-container">
+          <button id="back-to-top" class="circle-button-top" onclick="scrollToTop()">
+            <img src="svg/arrow-up.svg" alt="Back to Top" class="back-to-top-icon"/>
+          </button>
+        </div>
+      
+        <footer style="margin-top: 20px;">
+          Made with 
+          <svg viewBox="0 0 1792 1792" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" style="height: 0.8rem;">
+            <path d="M896 1664q-26 0-44-18l-624-602q-10-8-27.5-26T145 952.5 77 855 23.5 734 0 596q0-220 127-344t351-124q62 0 126.5 21.5t120 58T820 276t76 68q36-36 76-68t95.5-68.5 120-58T1314 128q224 0 351 124t127 344q0 221-229 450l-623 600q-18 18-44 18z" fill="#ef35aa"></path>
+        </svg> 
+        in <a href="https://www.google.com/maps/dir//Apeldoorn" target="_blank" class="custom-link">Apeldoorn</a><br>
+        See more <a href="https://community.homey.app/t/apps-made-by-lrvdlinden/85452" target="_blank" class="custom-link">apps</a> by <a href="https://community.homey.app/t/apps-made-by-lrvdlinden/85452" target="_blank" class="custom-link-reverse">@LRvdLinden</a>
+       </footer>
+        </div>
+  
+        <div id="create-or-edit-form" class="form-wrapper hidden">
+          <!-- Formulier -->
+          <form class="homey-form">
+              <fieldset class="homey-form-fieldset">
+                  <legend class="homey-form-legend" data-i18n="settings.person.title">Person</legend>
+      
+                  <div class="flex-2">
+                    <div class="field-2 homey-form-group">
+                      <label class="homey-form-label" for="name" data-i18n="settings.person.name"></label>
+                      <input class="homey-form-input" id="name" type="text" placeholder="e.g. Jon Doe" />
+                  </div>
+      
+                  <div class="field-2 homey-form-group">
+                    <label class="homey-form-label" for="dateOfBirth" data-i18n="settings.person.dateOfBirth"></label>
+                    <input class="homey-form-input" id="dateOfBirth" type="date" />
+                </div>
+              </div>
+      
+              <label class="homey-form-checkbox">
+                <input class="homey-form-checkbox-input" type="checkbox" id="baby" name="checkbox-example"/>
+                <span class="homey-form-checkbox-checkmark"></span>
+                <span class="homey-form-checkbox-text" data-i18n="settings.person.babyCheckbox"></span>
+              </label>        
+      
+                  <div class="flex-2">
+                    <div class="field-2 homey-form-group">
+                      <label class="homey-form-label" for="mobile" data-i18n="settings.person.mobile"></label>
+                      <input class="homey-form-input" id="mobile" type="text" placeholder="e.g. +31601020304"/>
+                  </div>
+      
+                  <div class="field-2 homey-form-group">
+                    <label class="homey-form-label" for="mobile2" data-i18n="settings.person.mobile2"></label>
+                    <input class="homey-form-input" id="mobile2" type="text" placeholder="e.g. +31601020304" />
+                </div>
+                </div>
+                
+                <div class="homey-form-group">
+                  <label for="category" class="homey-form-label" data-i18n="settings.person.category"></label>
+                  <input id="category" name="category" class="homey-form-input" placeholder="Select or enter a category">
+                  <div id="categoryDropdown" class="category-dropdown">
+                    <!-- Categorie-opties en verwijderknoppen worden hier ingeladen -->
+                  </div>
+                </div>         
+      
+                <div class="homey-form-group">
+                      <label class="homey-form-label" for="message" data-i18n="settings.person.message"></label>
+                      <textarea class="homey-form-textarea" id="message" rows="3" placeholder="e.g. Happy birthday Jon 🎉🍻"></textarea>
+                  </div>
+      
+                  <div class="homey-form-group">
+                    <label class="homey-form-label" for="imageUrl" data-i18n="settings.person.imageUrl"></label>
+                    <input class="homey-form-input" id="imageUrl" type="text" placeholder="Https://"/>
+                </div>
+      
+                <div class="flex" style="margin-bottom: 20px;">
+                  <button id="save-button" class="homey-button-primary-full"
+                          data-i18n="settings.person.save"></button>
+                  <button id="cancel-button" class="homey-button-secondary-full-shadow"
+                          data-i18n="settings.person.cancel"></button>
+              </div>
+              
+              <footer style="margin-top: 20px;">
+                Made with 
+                <svg viewBox="0 0 1792 1792" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" style="height: 0.8rem;">
+                  <path d="M896 1664q-26 0-44-18l-624-602q-10-8-27.5-26T145 952.5 77 855 23.5 734 0 596q0-220 127-344t351-124q62 0 126.5 21.5t120 58T820 276t76 68q36-36 76-68t95.5-68.5 120-58T1314 128q224 0 351 124t127 344q0 221-229 450l-623 600q-18 18-44 18z" fill="#ef35aa"></path>
+              </svg> 
+              in <a href="https://www.google.com/maps/dir//Apeldoorn" target="_blank" class="custom-link">Apeldoorn</a><br>
+              </footer>
+            </fieldset>
+          </form>
+      </div>
+
+      <script type="text/javascript">
+document.getElementById('menu-birthdays').addEventListener('click', function() {
+  document.getElementById('content-area').classList.remove('hidden');
+  document.getElementById('person-list').classList.remove('hidden');
+  document.getElementById('menu').classList.add('hidden');
+  // Laat de buttons-container altijd zichtbaar bij person-list
+});
+
+document.getElementById('add-person-button').addEventListener('click', function() {
+  document.getElementById('create-or-edit-form').classList.remove('hidden');
+  document.getElementById('person-list').classList.add('hidden');
+  // De buttons-container blijft zichtbaar
+});
+
+document.getElementById('back-to-menu').addEventListener('click', function() {
+  document.getElementById('content-area').classList.add('hidden');
+  document.getElementById('person-list').classList.add('hidden');
+  document.getElementById('create-or-edit-form').classList.add('hidden');
+  document.getElementById('menu').classList.remove('hidden');
+  // Nu wordt de buttons-container ook verborgen omdat we teruggaan naar het menu
+});
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+
+  let persons = [];
+  let myHomey;
+  let editingIndex = -1;
+  let editingPerson = null;
+
+  function onHomeyReady (Homey) {
+    myHomey = Homey;
+    myHomey.ready();
+
+    loadPersons();
+  }
+
+  function loadPersons () {
+    myHomey.get("persons", function(err, data) {
+      if (!err && data) {
+        persons = data;
+        sortBirthdays();
+        renderPersons();
+      }
+    });
+  }
+
+  function sortBirthdays() {
+  const today = new Date();
+  const currentYear = today.getFullYear();
+  const currentDayOfYear = getDayOfYear(today);
+
+  persons.sort((a, b) => {
+    // Creëer een datum voor dit jaar voor beide verjaardagen
+    const dateA = new Date(a.dateOfBirth);
+    dateA.setFullYear(currentYear);
+    const dayOfYearA = getDayOfYear(dateA);
+
+    const dateB = new Date(b.dateOfBirth);
+    dateB.setFullYear(currentYear);
+    const dayOfYearB = getDayOfYear(dateB);
+
+    // Bepaal of de verjaardag al geweest is door te kijken of de dag van het jaar groter is dan vandaag
+    const isPastA = dayOfYearA < currentDayOfYear;
+    const isPastB = dayOfYearB < currentDayOfYear;
+
+    if (isPastA !== isPastB) {
+      // Als een van de twee verjaardagen al geweest is, dan sorteren we die naar beneden
+      return isPastA ? 1 : -1;
+    }
+
+    // Als beide verjaardagen in het verleden of de toekomst zijn, sorteer dan op dag van het jaar
+    return dayOfYearA - dayOfYearB;
+  });
+}
+
+// Helper functie om de dag van het jaar te krijgen
+function getDayOfYear(date) {
+  const start = new Date(date.getFullYear(), 0, 0);
+  const diff = date - start;
+  const oneDay = 1000 * 60 * 60 * 24;
+  return Math.floor(diff / oneDay);
+}
+
+
+  const tableBodyElement = document.querySelector("#person-table tbody");
+  const personsListElement = document.querySelector("div#person-list");
+  const createOrEditFormElement = document.querySelector("div#create-or-edit-form");
+  const addPersonButtonElement = document.querySelector("#add-person-button");
+  const saveButtonElement = document.querySelector("#save-button");
+  const cancelButtonElement = document.querySelector("#cancel-button");
+
+
+  addPersonButtonElement.addEventListener("click", showCreateOrEdit);
+  saveButtonElement.addEventListener("click", addOrUpdateBirthday);
+  cancelButtonElement.addEventListener("click", cancelCreateOrEdit);
+
+  function renderPersonRow (person, tableBody) {
+    console.log("creating row");
+    const row = document.createElement("tr");
+
+    const nameCell = document.createElement("td");
+    nameCell.textContent = person.name;
+    row.appendChild(nameCell);
+
+    const dateOfBirthCell = document.createElement("td");
+    const dateParts = person.dateOfBirth.split("-");
+    const formattedDate = `${dateParts[2]}-${dateParts[1]}`;
+    dateOfBirthCell.textContent = formattedDate;
+    row.appendChild(dateOfBirthCell);
+
+    const ageCell = document.createElement("td");
+    const age = getPersonAge(person);
+    ageCell.textContent = (age === 'N/A') ? age : age + 1; 
+    row.appendChild(ageCell);
+
+    const messageCell = document.createElement("td");
+    messageCell.textContent = person.message;
+    row.appendChild(messageCell);
+
+    tableBody.appendChild(row);
+
+    const actionRow = document.createElement("tr");
+
+    const actionsCell = document.createElement("td");
+
+    actionsCell.colSpan = 4;
+    actionsCell.style.textAlign = "center";
+    actionsCell.style.borderBottom = "solid 1px #eee";
+
+    const editButton = document.createElement("button");
+    editButton.classList.add("homey-button-secondary-shadow");
+    editButton.textContent = myHomey.__("settings.personList.edit");
+    editButton.addEventListener("click", () => editPerson(person));
+    actionsCell.appendChild(editButton);
+
+    const deleteButton = document.createElement("button");
+    deleteButton.classList.add("homey-button-danger-shadow");
+    deleteButton.textContent = myHomey.__("settings.personList.delete");
+    deleteButton.addEventListener("click", () => deletePerson(person.id));
+    actionsCell.appendChild(deleteButton);
+
+    actionRow.appendChild(actionsCell);
+
+    tableBody.appendChild(actionRow);
+  }
+
+  function getPersonAge(person) {
+    const today = new Date();
+    const birthDate = new Date(person.dateOfBirth);
+
+    // Retourneer 'N/A' voor baby's
+    if (person.isBaby) {
+        return 'N/A';
+    }
+
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const monthDifference = today.getMonth() - birthDate.getMonth();
+    const dayDifference = today.getDate() - birthDate.getDate();
+
+    // Als de verjaardag dit jaar nog moet komen of vandaag is, trek dan 1 jaar af
+    if (monthDifference < 0 || (monthDifference === 0 && dayDifference <= 0)) {
+        age--;
+    }
+
+    return age;
+}
+
+  // Function to render the list of persons
+  function renderPersons () {
+    console.log("Rendering persons", { persons });
+    console.log(tableBodyElement);
+    tableBodyElement.innerHTML = "";
+    console.log(tableBodyElement);
+    persons.forEach(person => {
+      console.log(person);
+      renderPersonRow(person, tableBodyElement);
+    });
+  }
+
+  // Function to edit a person (placeholder function for now)
+  function editPerson (person) {
+    editingIndex = persons.findIndex(p => p.id === person.id);
+
+    createOrEditFormElement.classList.remove("hidden");
+    personsListElement.classList.add("hidden");
+    addPersonButtonElement.classList.add("hidden");
+
+    console.log(`Edit person with ID ${person.id}`);
+
+    document.getElementById("name").value = person.name;
+    document.getElementById("dateOfBirth").value = person.dateOfBirth;
+    document.getElementById("mobile").value = person.mobile;
+    document.getElementById("mobile2").value = person.mobile2;
+    document.getElementById("message").value = person.message;
+    document.getElementById("category").value = person.category;
+    document.getElementById("imageUrl").value = person.imageUrl;
+    document.getElementById("baby").checked = person.isBaby;
+
+    editingPerson = person;
+  }
+
+  // Function to delete a person (placeholder function for now)
+  function deletePerson (personId) {
+    console.log(`Delete person with ID ${personId}`);
+
+    persons = persons.filter(person => person.id !== personId);
+
+    save();
+
+    renderPersons();
+  }
+
+  function showCreateOrEdit (event) {
+    clearFields();
+
+    event?.preventDefault();
+    addPersonButtonElement.classList.add("hidden");
+    personsListElement.classList.add("hidden");
+    createOrEditFormElement.classList.remove("hidden");
+  }
+
+  function cancelCreateOrEdit (event) {
+    event?.preventDefault();
+    personsListElement.classList.remove("hidden");
+    addPersonButtonElement.classList.remove("hidden");
+    createOrEditFormElement.classList.add("hidden");
+  }
+
+  function isValid (person) {
+    const nowDate = new Date();
+    const dateOfBirthDate = new Date(person.dateOfBirth);
+
+    return dateOfBirthDate.getFullYear() >= 1900
+      && dateOfBirthDate.getFullYear() <= nowDate.getFullYear()
+      && person.name !== ""
+      && person.name !== undefined
+      && person.dateOfBirth !== ""
+      && person.dateOfBirth !== undefined;
+  }
+
+  function addOrUpdateBirthday (event) {
+    event?.preventDefault();
+
+    const person = {
+  id: guid(),
+      name: document.getElementById("name").value,
+      dateOfBirth: document.getElementById("dateOfBirth").value,
+      mobile: document.getElementById("mobile").value ?? "",
+      mobile2: document.getElementById("mobile2").value || "",
+      message: document.getElementById("message").value ?? "",
+      category: document.getElementById("category").value ?? "",
+      imageUrl: document.getElementById("imageUrl").value || "https://raw.githubusercontent.com/LRvdLinden/Homey_Brands/main/Birthdays/birthday_card.png",
+      isBaby: document.getElementById("baby").checked
+};
+
+    if (!isValid(person)) {
+      myHomey.alert(myHomey.__("messages.validation_error"));
+    } else {
+      if (editingIndex === -1) {
+        persons.push(person);
+      } else {
+        persons[editingIndex] = person;
+        editingIndex = -1;
+      }
+
+      save();
+      renderPersons();
+      cancelCreateOrEdit(event);
+    }
+  }
+
+  function fillCreateOrEditForm ({ name, dateOfBirth, mobile, mobile2, message, category, imageUrl, isBaby }) {
+  document.getElementById("name").value = name ?? "";
+  document.getElementById("dateOfBirth").value = dateOfBirth ?? "";
+  document.getElementById("mobile").value = mobile ?? "";
+  document.getElementById("mobile2").value = mobile2 ?? "";
+  document.getElementById("message").value = message ?? "";
+  document.getElementById("category").value = category ?? "";
+  document.getElementById("imageUrl").value || "https://raw.githubusercontent.com/LRvdLinden/Homey_Brands/main/Birthdays/birthday_card.png";
+
+}
+
+  function editBirthday (index) {
+    const selectedPerson = persons[index];
+
+    fillCreateOrEditForm(selectedPerson);
+
+    editingIndex = index;
+  }
+
+  function clearFields () {
+    fillCreateOrEditForm({});
+
+    editingIndex = -1;
+  }
+
+  function guid () {
+    function s4 () {
+      return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
+    }
+
+    return s4() + s4() + "-" + s4() + "-" + s4() + "-" + s4() + "-" + s4() + s4() + s4();
+  }
+
+  function save () {
+    sortBirthdays();
+    myHomey.set("persons", persons, function(error) {
+      if (error) {
+        console.error(error);
+        myHomey.alert("Error saving data!");
+        return;
+      }
+      clearFields();
+    });
+  }
+
+document.addEventListener("DOMContentLoaded", function() {
+    loadCategories();
+    //initializeCategoryEvents();
+});
+
+// Functie om categorieën te laden in de dropdown
+function loadCategories() {
+    let categories = JSON.parse(localStorage.getItem('categories')) || [];
+    let dropdown = document.getElementById('categoryDropdown');
+    dropdown.innerHTML = '';
+
+    categories.forEach(function(category) {
+        let div = document.createElement('div');
+        div.classList.add('category-item');
+
+        let textSpan = document.createElement('span');
+        textSpan.classList.add('category-text');
+        textSpan.textContent = category;
+        div.appendChild(textSpan);
+
+
+        let deleteBtn = document.createElement('button');
+        deleteBtn.innerHTML = `
+    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="none" viewBox="0 0 24 24" stroke="rgb(231, 50, 50)" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+    </svg>
+`;
+        deleteBtn.classList.add('delete-btn');
+        deleteBtn.onclick = function(event) {
+            event.stopPropagation(); // Voorkom dat het klik-event verder gaat naar de div
+            deleteCategory(category);
+        };
+        div.appendChild(deleteBtn);
+
+        dropdown.appendChild(div);
+    });
+    initializeCategorySelection();
+}
+
+
+function initializeCategorySelection() {
+    let categoryDivs = document.querySelectorAll('#categoryDropdown .category-item');
+    categoryDivs.forEach(function(div) {
+        div.addEventListener('click', function(event) {
+            if (!event.target.matches('.delete-btn, .delete-btn *')) {
+                let categoryText = this.querySelector('span').textContent.trim();
+                document.getElementById('category').value = categoryText;
+                document.getElementById('categoryDropdown').style.display = 'none';
+            }
+        });
+    });
+}
+
+
+document.getElementById('category').addEventListener('input', function() {
+    let dropdown = document.getElementById('categoryDropdown');
+    let value = this.value;
+
+    // Toon de dropdown en filter de opties
+    dropdown.style.display = 'block';
+    let divs = dropdown.querySelectorAll('div');
+    divs.forEach(div => {
+        if (div.textContent.toLowerCase().includes(value.toLowerCase())) {
+            div.style.display = 'block';
+        } else {
+            div.style.display = 'none';
+        }
+    });
+});
+
+document.getElementById('category').addEventListener('focus', function() {
+    document.getElementById('categoryDropdown').style.display = 'block';
+});
+
+document.getElementById('category').addEventListener('blur', function() {
+    setTimeout(() => { // Vertraging om klik op delete te vangen
+        document.getElementById('categoryDropdown').style.display = 'none';
+    }, 200);
+});
+
+// Voeg nieuwe categorie toe
+document.getElementById('category').addEventListener('change', function() {
+    let value = this.value.trim();
+    if (value && !getCategories().includes(value)) {
+        addCategory(value);
+    }
+});
+
+function getCategories() {
+    return JSON.parse(localStorage.getItem('categories')) || [];
+}
+
+
+
+function addCategory(category) {
+    let categories = getCategories();
+    categories.push(category);
+    localStorage.setItem('categories', JSON.stringify(categories));
+    loadCategories();
+}
+
+function deleteCategory(category) {
+    let categories = getCategories();
+    categories = categories.filter(c => c !== category);
+    localStorage.setItem('categories', JSON.stringify(categories));
+    loadCategories();
+}
+
+// Laad categorieën bij het laden van de pagina
+loadCategories();
+
+
+</script>
+</body>
+
+</html>
+

@@ -1,0 +1,35 @@
+{
+  "settings": {
+    "title": "Paramètres d'anniversaire",
+    "description": "Configurez ici les notifications d'anniversaire que vous souhaitez recevoir.",
+    "person": {
+      "title": "Personne",
+      "name": "Nom",
+      "mobile": "Numéro de portable",
+      "mobile2": "Numéro de portable 2",
+      "message": "Message d'anniversaire",
+      "dateOfBirth": "Date de naissance",
+      "category": "Catégorie",
+      "babyCheckbox": "Ignorer l'année de naissance",
+      "imageUrl": "Birthday card image URL",
+      "add": "Ajouter une personne",
+      "save": "Enregistrer",
+      "cancel": "Annuler"
+    },
+    "personList": {
+      "title": "Personnes",
+      "name": "Nom",
+      "dateOfBirth": "Date de naissance",
+      "category": "Catégorie",
+      "message": "Message",
+      "actions": "Actions",
+      "edit": "Modifier",
+      "delete": "Supprimer"
+    }
+  },
+  "messages": {
+    "validation_error": "Veuillez vérifier les données saisies",
+    "person_added": "L'anniversaire de __name__ a été ajouté",
+    "birthday_notification": "Aujourd'hui, c'est l'anniversaire de __name__ 🎉. Il/Elle a __age__ ans."
+  }
+}

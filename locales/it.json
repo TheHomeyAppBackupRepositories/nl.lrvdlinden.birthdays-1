@@ -1,0 +1,35 @@
+{
+  "settings": {
+    "title": "Impostazioni Compleanno",
+    "description": "Configura qui le notifiche di compleanno che desideri ricevere.",
+    "person": {
+      "title": "Persona",
+      "name": "Nome",
+      "mobile": "Numero di cellulare",
+      "mobile2": "Numero di cellulare 2",
+      "message": "Messaggio di compleanno",
+      "dateOfBirth": "Data di nascita",
+      "category": "Categoria",
+      "babyCheckbox": "Ignora l'anno di nascita",
+      "imageUrl": "Birthday card image URL",
+      "add": "Aggiungi persona",
+      "save": "Salva",
+      "cancel": "Annulla"
+    },
+    "personList": {
+      "title": "Persone",
+      "name": "Nome",
+      "dateOfBirth": "Data di nascita",
+      "category": "Categoria",
+      "message": "Messaggio",
+      "actions": "Azioni",
+      "edit": "Modifica",
+      "delete": "Elimina"
+    }
+  },
+  "messages": {
+    "validation_error": "Si prega di controllare i dati inseriti",
+    "person_added": "Il compleanno di __name__ è stato aggiunto",
+    "birthday_notification": "Oggi è il compleanno di __name__ 🎉. Lui/Lei ha __age__ anni."
+  }
+}

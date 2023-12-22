@@ -1,0 +1,39 @@
+{
+  "menu": {
+    "title": "Verjaardagen"
+    },
+  "settings": {
+    "title": "Instellingen voor Verjaardagen",
+    "description": "Stel hier de verjaardagsmeldingen in die je wilt ontvangen.",
+    "person": {
+      "title": "Persoon",
+      "name": "Naam",
+      "mobile": "Mobiel nummer",
+      "mobile2": "Mobiel nummer 2",
+      "message": "Verjaardagsboodschap",
+      "dateOfBirth": "Geboortedatum",
+      "category": "Categorie",
+      "babyCheckbox": "Negeer geboortejaar",
+      "imageUrl": "Verjaardagskaart image URL",
+      "add": "Persoon toevoegen",
+      "save": "Opslaan",
+      "cancel": "Annuleren"
+    },
+    "personList": {
+      "title": "Personen",
+      "name": "Naam",
+      "dateOfBirth": "Verjaardag",
+      "age": "Wordt",
+      "category": "Categorie",
+      "message": "Bericht",
+      "actions": "Acties",
+      "edit": "Wijzigen",
+      "delete": "Verwijderen"
+    }
+  },
+  "messages": {
+    "validation_error": "Controleer de ingevoerde gegevens",
+    "person_added": "Verjaardag van __name__ is toegevoegd",
+    "birthday_notification": "Vandaag is de verjaardag van __name__ 🎉. Hij/Zij is __age__ jaar oud."
+  }
+}

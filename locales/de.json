@@ -1,0 +1,35 @@
+{
+  "settings": {
+    "title": "Geburtstagseinstellungen",
+    "description": "Legen Sie hier die Geburtstagsbenachrichtigungen fest, die Sie erhalten möchten.",
+    "person": {
+      "title": "Person",
+      "name": "Name",
+      "mobile": "Handynummer",
+      "mobile": "Handynummer 2",
+      "message": "Geburtstagsnachricht",
+      "dateOfBirth": "Geburtsdatum",
+      "category": "Kategorie",
+      "babyCheckbox": "Geburtsjahr ignorieren",
+      "imageUrl": "Birthday card image URL",
+      "add": "Person hinzufügen",
+      "save": "Speichern",
+      "cancel": "Abbrechen"
+    },
+    "personList": {
+      "title": "Personen",
+      "name": "Name",
+      "dateOfBirth": "Geburtsdatum",
+      "category": "Kategorie",
+      "message": "Nachricht",
+      "actions": "Aktionen",
+      "edit": "Bearbeiten",
+      "delete": "Löschen"
+    }
+  },
+  "messages": {
+    "validation_error": "Bitte überprüfen Sie die eingegebenen Daten",
+    "person_added": "Geburtstag von __name__ wurde hinzugefügt",
+    "birthday_notification": "Heute ist der Geburtstag von __name__ 🎉. Er/Sie ist __age__ Jahre alt."
+  }
+}

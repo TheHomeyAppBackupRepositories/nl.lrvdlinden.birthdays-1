@@ -1,0 +1,472 @@
+
+/* Achtergrondkleur voor de gehele menu-pagina */
+#menu {
+  background-color: #ffffff;
+}
+.hidden {
+  display: none;
+}
+
+#menu li {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  /*border-radius: 8px; */
+  margin-bottom: 1px;
+}
+
+#menu li div {
+  display: flex;
+  align-items: center;
+}
+
+#menu li span {
+  margin-left: 10px;
+  font-size: 16px;
+  display: flex;
+  align-items: center; /* Dit zorgt ervoor dat de tekst verticaal gecentreerd is */
+}
+
+#menu li:last-child {
+  margin-left: auto;
+  margin-bottom: 0; /* Verwijder de marge voor het laatste item */
+}
+
+#menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+
+#menu li:hover {
+  background-color: #e9e9ef; /* Lichtere kleur voor hover-effect */
+}
+
+.flex-container {
+  display: flex;
+  align-items: center; /* Zorgt ervoor dat items verticaal gecentreerd zijn */
+}
+
+
+/* Stijlen voor de container van de SVG (cirkel) */
+.icon-container-birthdays {
+  width: 44px; /* Grootte van de cirkel */
+  height: 44px; /* Grootte van de cirkel */
+  border-radius: 50%; /* Maakt de cirkel rond */
+  background-color: #d32f8b; /* Achtergrondkleur van de cirkel */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Voorkomt dat de inhoud buiten de container uitsteekt */
+}
+
+.icon-container-birthdays svg {
+  width: 28px; 
+  height: auto; /* Behoudt de aspectverhouding */
+}
+
+.icon-container-soon {
+  width: 44px; /* Grootte van de cirkel */
+  height: 44px; /* Grootte van de cirkel */
+  border-radius: 50%; /* Maakt de cirkel rond */
+  background-color: #ff7f00; /* Achtergrondkleur van de cirkel */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Voorkomt dat de inhoud buiten de container uitsteekt */
+}
+
+.icon-container-soon svg {
+  width: 28px; 
+  height: auto; /* Behoudt de aspectverhouding */
+}
+
+.buttons-container {
+  height: 75px; /* Stel de hoogte in, pas aan indien nodig */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: sticky;
+  top: 0; /* Geen ruimte aan de bovenkant */
+  background-color: white; /* Of een andere passende achtergrondkleur */
+  z-index: 10;
+  margin-bottom: 15px; /* Ondermarge, pas aan indien nodig */
+}
+
+.scrollable-content {
+  /*overflow-y: auto; */
+  max-height: calc(100vh - [totale hoogte van vaste inhoud]px);
+}
+
+#back-to-menu {
+  width: 55px; 
+  height: 55px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+#back-to-menu {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+}
+
+#back-to-menu .back-button-icon {
+  height: 40px;
+  width: 24px;
+}
+
+#add-person-button {
+  margin-left: auto; /* Zet de Add knop aan de rechterkant */
+  width: 70x; /* Zorgt voor een cirkelvorm */
+  height: 70px; /* Zorgt voor een cirkelvorm */
+  border-radius: 50%; /* Maakt de knop rond */
+  background-color: #2c78fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: all 0.3s ease; /* Gladde overgang voor hover effect */
+}
+
+.add-person-button-icon {
+  height: 30px; /* Zorg dat het icoon kleiner is dan de knop */
+  width: 30px;
+  transition: all 0.3s ease;
+}
+
+#add-person-button:hover .add-person-button-icon {
+  width: 35px; /* Breedte van het icoon wordt 35px bij hover */
+  height: 35px; /* Hoogte van het icoon wordt 35px bij hover */
+}
+
+.back-to-top-container {
+  margin-top: 10px; /* Ruimte boven de knop */
+  display: flex;
+  justify-content: flex-end; /* Uitlijnen naar de rechterkant */
+}
+
+#back-to-top {
+  width: 30px; /* Diameter van de cirkel */
+  height: 30px; /* Diameter van de cirkel */
+  border-radius: 50%; /* Maakt het een perfecte cirkel */
+  background-color: #c8c8cf; /* Achtergrondkleur van de knop */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none; 
+  cursor: pointer;
+  padding: 0;
+}
+
+.back-to-top-icon {
+  width: 20px; /* Breedte van het icoon */
+  height: 30px; /* Hoogte van het icoon */
+}
+
+      .form-wrapper {
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+      }
+
+      .alert {
+        position: relative;
+        padding: 0.75rem 1.25rem;
+        margin-bottom: 1rem;
+        border: 1px solid transparent;
+        border-radius: 0.25rem;
+      }
+
+      .hint {
+        color: #004085;
+        background-color: #cce5ff;
+        border-color: #b8daff;
+      }
+
+      .help {
+        color: #383d41;
+        background-color: #f4f5f5;
+        border-color: #e4e5e7;
+      }
+
+      .footer {
+        margin-top: auto;
+      }
+
+      .hidden {
+        display: none !important;
+      }
+
+      .field {
+        margin-bottom: 15px;
+      }
+      .flex {
+        display: flex;
+        gap: 10px; 
+      }
+      .homey-form-input[type="date"] {
+        padding: 8px;
+        border-radius: 5px;
+        border: solid 1px #ccc;
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0 1px;
+        line-height: 24px;
+      }
+
+      .homey-table {
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+      }
+
+      .homey-table tr th, .homey-table tr td {
+        padding: 5px;
+      }
+
+      .homey-table button {
+        padding: 5px 10px;
+        font-size: 15px;
+        margin: 0 3px 5px 0;
+      }
+      .homey-form-checkbox-text {
+      color: inherit; 
+      }
+      .flex {
+        display: flex;
+      }
+
+      .flex button:not(:first-child) {
+        margin-left: 5px;
+      }
+      /* Verdeling met 2 velden op een rij */
+.flex-2 {
+  display: flex;
+  gap: 10px; /* Voeg hier de gewenste tussenruimte in pixels toe */
+}
+
+/* Beide velden in de rij nemen de helft van de beschikbare ruimte in */
+.field-2:nth-child(1),
+.field-2:nth-child(2) {
+  flex: 1;
+}
+
+/* Verdeling met 3 velden op een rij */
+.flex-3 {
+  display: flex;
+  gap: 10px; /* Voeg hier de gewenste tussenruimte in pixels toe */
+}
+
+/* Het eerste veld in de rij neemt 1/2 van de beschikbare ruimte in, de andere twee elk 1/4 */
+.field-3:nth-child(1) {
+  flex: 2;
+}
+
+.field-3:nth-child(2),
+.field-3:nth-child(3) {
+  flex: 1;
+}
+
+.homey-form-input {
+  padding: 8px;
+  border-radius: 5px;
+  border: solid 1px #ccc;
+  width: 100%;
+  box-sizing: border-box;
+  line-height: 24px;
+  position: relative; /* Voor dropdown-pijl */
+}
+
+.homey-form-input[type="text"]::after {
+  content: '';
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #000; /* Kleur van de pijl */
+}
+
+/* Zorg ervoor dat de category-dropdown dezelfde breedte heeft als het invoerveld */
+.homey-form-group {
+    position: relative;
+}
+
+.category-dropdown {
+    position: absolute;
+    top: 100%; /* Direct onder het invoerveld */
+    left: 0;
+    width: 100%; /* Dezelfde breedte als het invoerveld */
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-top: none;
+    z-index: 1000;
+    display: none; /* Verborgen totdat geactiveerd */
+}
+
+/* Stijlen voor items binnen de dropdown */
+.category-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.category-text {
+    flex-grow: 1;
+    margin-right: 10px; /* Ruimte tussen tekst en knop */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Voegt ellips toe als de tekst te lang is */
+    white-space: nowrap; /* Voorkomt tekstterugloop */
+}
+
+/* Responsive design voor kleinere schermen */
+@media (max-width: 600px) {
+    .category-dropdown {
+        width: calc(100% - 20px); /* 100% van de ouder minus wat marge */
+        margin: 0 10px; /* Voeg marge toe om niet tegen de randen van het scherm te plakken */
+    }
+
+    .category-item {
+        padding: 8px; /* Kleinere padding voor items */
+    }
+
+    .category-text {
+        font-size: 14px; /* Kleinere tekstgrootte */
+    }
+
+    .category-delete-btn {
+        width: 35px; /* Kleinere knop, zorg dat deze niet te klein wordt */
+        height: 35px;
+    }
+
+    .category-delete-btn svg {
+        width: 20px; /* Pas de grootte van SVG aan binnen de knop */
+        height: 20px;
+    }
+  }
+ 
+.category-dropdown div {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.category-dropdown div:hover {
+  background-color: #f0f0f0;
+}
+
+/* Stijlen specifiek voor de delete knop */
+.category-delete-btn {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  border: 2px solid rgb(231, 50, 50);
+  background-color: #fff;
+  cursor: pointer;
+  box-shadow: 0 0 10px #333;
+  overflow: hidden;
+  transition: .3s;
+}
+
+.category-delete-btn:hover {
+  background-color: rgb(245, 207, 207);
+  transform: scale(1.2);
+  box-shadow: 0 0 4px #111;
+  transition: .3s;
+}
+
+.category-delete-btn svg {
+  color: rgb(231, 50, 50);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: .3s;
+}
+
+.category-delete-btn:focus svg {
+  opacity: 0;
+  transition: .3s;
+}
+
+.category-delete-btn span {
+  width: 150px;
+  position: absolute;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  color: rgb(231, 50, 50);
+  font-weight: 600;
+  transition: .3s;
+}
+
+.category-delete-btn:focus {
+  width: 150px;
+  height: 50px;
+  transition: .3s;
+}
+
+.category-delete-btn:focus span {
+  opacity: 1;
+  transition: .3s;
+}
+
+/* Voeg deze stijlen toe om de rest van je elementen correct te stijlen */
+.category-dropdown div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+}
+.custom-link {
+    color: inherit; /* Erft de kleur van de ouder */
+    text-decoration: none; /* Verwijdert de onderstreping */
+  }
+
+.custom-link:hover {
+  color: #d32f8b; /* Verandert de kleur bij hover */
+  text-decoration: none; /* Verwijdert de onderstreping */
+}
+
+.custom-link-reverse {
+  color: #d32f8b; /* Basiskleur voor de link */
+  text-decoration: none; /* Verwijdert de onderstreping */
+}
+
+.custom-link-reverse:hover {
+  color: inherit; /* Erft de kleur van de ouder */
+  text-decoration: none; /* Verwijdert de onderstreping */
+}
+
